@@ -4,6 +4,7 @@ public class Driving {
 
 	public static void main(String[] args) {
 		int age =22;
+		System.out.println("age of the candidate is:"+age);
 		if (age>=21) {
 			System.out.println("candidate is eligible for driving licence");
 		}else
