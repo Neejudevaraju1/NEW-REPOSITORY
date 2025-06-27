@@ -8,6 +8,9 @@ public class CheckboxAndRadiobutton extends Base{
 		driver.navigate().to("https://selenium.qabible.in/check-box-demo.php");
 		WebElement checkbox=driver.findElement(By.id("gridCheck"));
 		checkbox.click();
+		checkbox.isSelected();
+		System.out.println(checkbox.isSelected());
+		
 	}
 	public void radioButton() {
 		driver.navigate().to("https://selenium.qabible.in/radio-button-demo.php");

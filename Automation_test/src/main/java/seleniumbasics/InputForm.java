@@ -7,6 +7,8 @@ public class InputForm extends Base {
 	public void enterMessage() {
 		driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
 		WebElement  enterMessage=driver.findElement(By.id("single-input-field"));
+		enterMessage.isEnabled();
+		System.out.println(enterMessage.isEnabled());
 		enterMessage.sendKeys("Hello");
 		WebElement showMessage=driver.findElement(By.id("button-one"));
 		showMessage.click();
