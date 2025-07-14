@@ -4,23 +4,30 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import mainpackage.LoginPage;
+import pages.LoginPage;
 
 public class LoginPageTest extends Base {
+	@Test
+	public void VerifyUserCanLoginWithValidCredentials() {
+		LoginPage login=new LoginPage(driver);
+		login.usernameAndPassword("admin", "admin");
+		login.clickButton();
+	}
+	
   @Test(dataProvider = "credentials")
-  public void enterUsernameAndPassword(String user,String pass) {
+  public void verifyUserCanLoginWithValidUsernameAndInvalidPassword(String user,String pass) {
 	  LoginPage login= new LoginPage(driver);
 	  login.usernameAndPassword(user,pass);
 	  login.clickButton();
   }
   @DataProvider(name="credentials")
 	  public Object[][] testdata(){
-	Object  data[][]= {{"admin","admin"},{"test","test"},{"admin","test"},{"test","admin"}};
+	Object  data[][]= {{"test","test"},{"admin","test"},{"test","admin"}};
 	return data;
   }
   @Test
   @Parameters({"username","password"})
-  public void enterCredentials(String User,String pass) {
+  public void loginwithInvalidCredentials(String User,String pass) {
 	  LoginPage login = new LoginPage(driver);
 	  login.usernameAndPassword(User, pass);
 	  login.clickButton();
