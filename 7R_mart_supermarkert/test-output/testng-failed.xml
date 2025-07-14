@@ -6,8 +6,8 @@
       <class name="testscriptpackage.LoginPageTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="enterUsernameAndPassword"/>
           <include name="afterMethod"/>
+          <include name="enterCredentials"/>
         </methods>
       </class> <!-- testscriptpackage.LoginPageTest -->
     </classes>
