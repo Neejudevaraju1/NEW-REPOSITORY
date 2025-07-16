@@ -20,6 +20,7 @@ public AdminUserPage(WebDriver driver) {
 @FindBy(xpath="//select[@name='user_type']")WebElement userType;
 //Select select=new Select(userType);
 @FindBy(xpath="//button[@name='Create']") WebElement save;
+@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alert;
  public void clickOnAdmin() {
 	 adminuser.click();
  }
@@ -37,4 +38,7 @@ public AdminUserPage(WebDriver driver) {
  public void clickSaveButton() {
 	 save.click();
  }
+ public boolean isAlertIsDisplayed() {
+		return alert.isDisplayed();
+	}
 }

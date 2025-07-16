@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testscriptpackage.AdminUserPageTest">
+      <class name="testscriptpackage.HomePageTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="createNewAdminUserInformation"/>
+          <include name="afterMethod"/>
+          <include name="clickOnAdminAndLogout"/>
         </methods>
-      </class> <!-- testscriptpackage.AdminUserPageTest -->
+      </class> <!-- testscriptpackage.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

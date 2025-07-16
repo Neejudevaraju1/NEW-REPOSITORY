@@ -1,5 +1,6 @@
 package testscriptpackage;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -12,6 +13,8 @@ public class LoginPageTest extends Base {
 		LoginPage login=new LoginPage(driver);
 		login.usernameAndPassword("admin", "admin");
 		login.clickButton();
+		boolean isdashboardDisplayed=login.isDashboardIsDisplayed();
+		Assert.assertTrue(isdashboardDisplayed, "Home page is not loaded");
 	}
 	
   @Test(dataProvider = "credentials")
@@ -19,6 +22,8 @@ public class LoginPageTest extends Base {
 	  LoginPage login= new LoginPage(driver);
 	  login.usernameAndPassword(user,pass);
 	  login.clickButton();
+	  boolean isalertdisplayed=login.isAlertMessageIsDisplayed();
+	  Assert.assertTrue(isalertdisplayed, "invalid authentication is allowed");
   }
   @DataProvider(name="credentials")
 	  public Object[][] testdata(){
@@ -31,6 +36,8 @@ public class LoginPageTest extends Base {
 	  LoginPage login = new LoginPage(driver);
 	  login.usernameAndPassword(User, pass);
 	  login.clickButton();
+	  boolean isalertdisplayed=login.isAlertMessageIsDisplayed();
+	  Assert.assertTrue(isalertdisplayed, "invalid authentication is allowed");
   }
   
 }
