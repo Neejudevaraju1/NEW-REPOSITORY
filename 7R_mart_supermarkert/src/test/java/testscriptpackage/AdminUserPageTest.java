@@ -3,6 +3,7 @@ package testscriptpackage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.AdminUserPage;
 import pages.LoginPage;
 
@@ -19,7 +20,7 @@ public class AdminUserPageTest extends Base {
 	  adminuser.selectFromDropdown("admin");
 	  adminuser.clickSaveButton();
 	  boolean isAlertDisplayed= adminuser.isAlertIsDisplayed();
-	  Assert.assertTrue(isAlertDisplayed, "Unable to save the admin information");
+	  Assert.assertTrue(isAlertDisplayed,Constant.ERROR_MESSAGE_UNABLE_TO_SAVE_ADMIN_INFO );
 	  
 	  
   }

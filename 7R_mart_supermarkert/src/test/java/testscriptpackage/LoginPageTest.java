@@ -5,6 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import constants.Constant;
 import pages.LoginPage;
 
 public class LoginPageTest extends Base {
@@ -14,7 +15,7 @@ public class LoginPageTest extends Base {
 		login.usernameAndPassword("admin", "admin");
 		login.clickButton();
 		boolean isdashboardDisplayed=login.isDashboardIsDisplayed();
-		Assert.assertTrue(isdashboardDisplayed, "Home page is not loaded");
+		Assert.assertTrue(isdashboardDisplayed, Constant.ERROR_MESSAGE_FOR_LOGIN);
 	}
 	
   @Test(dataProvider = "credentials")
@@ -23,7 +24,7 @@ public class LoginPageTest extends Base {
 	  login.usernameAndPassword(user,pass);
 	  login.clickButton();
 	  boolean isalertdisplayed=login.isAlertMessageIsDisplayed();
-	  Assert.assertTrue(isalertdisplayed, "invalid authentication is allowed");
+	  Assert.assertTrue(isalertdisplayed, Constant.ERROR_MESSAGE_FOR_INVALID_LOGIN);
   }
   @DataProvider(name="credentials")
 	  public Object[][] testdata(){
@@ -37,7 +38,7 @@ public class LoginPageTest extends Base {
 	  login.usernameAndPassword(User, pass);
 	  login.clickButton();
 	  boolean isalertdisplayed=login.isAlertMessageIsDisplayed();
-	  Assert.assertTrue(isalertdisplayed, "invalid authentication is allowed");
+	  Assert.assertTrue(isalertdisplayed, Constant.ERROR_MESSAGE_FOR_INVALID_LOGIN);
   }
   
 }
