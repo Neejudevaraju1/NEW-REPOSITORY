@@ -8,11 +8,12 @@ import utilities.PageUtilities;
 
 public class AdminUserPage {
 	WebDriver driver;
-	PageUtilities utility= new PageUtilities();
+	PageUtilities utility;
 	
 public AdminUserPage(WebDriver driver) {
 	this.driver=driver;
 	PageFactory.initElements(driver, this);
+	utility= new PageUtilities(driver);
 }
 @FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin'])[2]")WebElement adminuser;
 @FindBy(xpath="//a[@onclick='click_button(1)']")WebElement newbutton;
