@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.Select;
 public class PageUtilities {
 	
 	WebDriver driver;
-	public PageUtilities(WebDriver driver) {
-		this.driver=driver;
-	}
+	//public PageUtilities(WebDriver driver) {
+	//	this.driver=driver;
+//	}
        //DropDown Select class utilities
 	//select from drop down by value
 	public void selectByValue(WebElement element, String value) {

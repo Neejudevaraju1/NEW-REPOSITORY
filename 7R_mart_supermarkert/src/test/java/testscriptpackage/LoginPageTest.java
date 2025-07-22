@@ -1,5 +1,7 @@
 package testscriptpackage;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -7,12 +9,15 @@ import org.testng.annotations.Test;
 
 import constants.Constant;
 import pages.LoginPage;
+import utilities.ExcelUtility;
 
 public class LoginPageTest extends Base {
 	@Test
-	public void VerifyUserCanLoginWithValidCredentials() {
+	public void VerifyUserCanLoginWithValidCredentials() throws IOException {
 		LoginPage login=new LoginPage(driver);
-		login.usernameAndPassword("admin", "admin");
+		String userName=ExcelUtility.readStringData(1, 0, "Loginpagetest");
+		String password=ExcelUtility.readStringData(1,1, "Loginpagetest");
+		login.usernameAndPassword(userName,password);
 		login.clickButton();
 		boolean isdashboardDisplayed=login.isDashboardIsDisplayed();
 		Assert.assertTrue(isdashboardDisplayed, Constant.ERROR_MESSAGE_FOR_LOGIN);

@@ -19,6 +19,6 @@ public class ManageNewsPageTest extends Base {
 	  managenews.enterNewsToTheField(" Welcome to the world NEWS");
 	  managenews.clickSaveButton();
 	  boolean isAlertDisplayed= managenews.isAlertIsDiplayedAfterSaving();
-	  Assert.assertTrue(isAlertDisplayed,Constant.EEROR_MESSAGE_FOR_UNABLE_TO_SAVE_NEWS );
+	  Assert.assertTrue(isAlertDisplayed,Constant.ERROR_MESSAGE_FOR_UNABLE_TO_SAVE_NEWS );
   }
 }
