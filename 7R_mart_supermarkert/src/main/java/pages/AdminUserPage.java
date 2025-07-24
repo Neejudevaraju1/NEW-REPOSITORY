@@ -13,9 +13,9 @@ public class AdminUserPage {
 public AdminUserPage(WebDriver driver) {
 	this.driver=driver;
 	PageFactory.initElements(driver, this);
-	//utility= new PageUtilities(driver);
+	
 }
-@FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin'])[2]")WebElement adminuser;
+
 @FindBy(xpath="//a[@onclick='click_button(1)']")WebElement newbutton;
 @FindBy(xpath="//input[@name='username']")WebElement user_Name;
 @FindBy(xpath="//input[@name='password']")WebElement password;
@@ -23,21 +23,23 @@ public AdminUserPage(WebDriver driver) {
 @FindBy(xpath="//button[@name='Create']") WebElement save;
 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alert;
 
- public void clickOnAdmin() {
-	 adminuser.click();
- }
- public void clickOnNew() {
+
+ public AdminUserPage clickOnNew() {
 	 newbutton.click();
+	 return this;
  }
- public void enterUserAndPassword(String username,String passwd) {
+ public AdminUserPage enterUserAndPassword(String username,String passwd) {
 	 user_Name.sendKeys(username);
 	 password.sendKeys(passwd);
+	 return this;
  }
- public void selectFromDropdown(String typevalue) {
+ public AdminUserPage selectFromDropdown(String typevalue) {
 	utility.selectByValue(userType, typevalue);
+	return this;
  }
- public void clickSaveButton() {
+ public AdminUserPage clickSaveButton() {
 	 save.click();
+	 return this;
  }
  public boolean isAlertIsDisplayed() {
 		return alert.isDisplayed();

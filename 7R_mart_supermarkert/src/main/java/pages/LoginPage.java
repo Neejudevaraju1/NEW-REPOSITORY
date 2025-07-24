@@ -19,13 +19,22 @@ public LoginPage(WebDriver driver) {
 @FindBy(xpath="//button[@type='submit']")WebElement SignIn;
 @FindBy(xpath="//p[text()='Dashboard']")WebElement dashboard;
 @FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alertmessage;
-public void usernameAndPassword(String usernamefield, String passwordField) {
+
+// return types of the methods are changed to the class names so as to make a connections between the classes written for each pages
+// here return type is the class name because the function does not move to another page . so return the same class
+
+public LoginPage usernameAndPassword(String usernamefield, String passwordField) {
 	username.sendKeys(usernamefield);
 	password.sendKeys(passwordField);
+	return this;
 }
-public void clickButton() {
+
+// here the return type is HomePage class because the click function will open the home page
+
+public HomePage clickButton() {
 	waitutility.waitForElementToClick(driver, SignIn);
 	SignIn.click();
+	return new HomePage(driver);     // new homepage is object creation 
 }
 public boolean isDashboardIsDisplayed() {
 	

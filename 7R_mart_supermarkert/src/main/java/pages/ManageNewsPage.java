@@ -11,22 +11,23 @@ public class ManageNewsPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	@FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'])[2]")WebElement moreInfo;
+	
 	@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement newButton;
 	@FindBy(xpath="//textarea[@id='news']")WebElement enterNews;
 	@FindBy(xpath="//button[@name='create']")WebElement saveButton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertMessage;
-	public void clickMoreInfo() {
-		moreInfo.click();
-	}
-	public void clickNewButton() {
+	
+	public ManageNewsPage clickNewButton() {
 		newButton.click();
+		return this;
 	}
-	public void enterNewsToTheField(String news) {
+	public ManageNewsPage enterNewsToTheField(String news) {
 		enterNews.sendKeys(news);
+		return this;
 	}
-	public void clickSaveButton() {
+	public ManageNewsPage clickSaveButton() {
 		saveButton.click();
+		return this;
 	}
 	public boolean isAlertIsDiplayedAfterSaving() {
 		
