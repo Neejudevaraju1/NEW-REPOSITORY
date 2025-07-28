@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-24T17:40:56 IST" name="Default suite" finished-at="2025-07-24T17:41:01 IST" duration-ms="5632">
+  <suite started-at="2025-07-28T21:25:02 IST" name="Suite" finished-at="2025-07-28T21:25:11 IST" duration-ms="9745">
     <groups>
     </groups>
-    <test started-at="2025-07-24T17:40:56 IST" name="Default test" finished-at="2025-07-24T17:41:01 IST" duration-ms="5632">
-      <class name="testscriptpackage.ManageNewsPageTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscriptpackage.ManageNewsPageTest@5c6648b0]" started-at="2025-07-24T17:40:56 IST" name="beforeMethod" finished-at="2025-07-24T17:40:58 IST" duration-ms="2396" status="PASS">
+    <test started-at="2025-07-28T21:25:02 IST" name="ExtendReport" finished-at="2025-07-28T21:25:11 IST" duration-ms="9745">
+      <class name="testscriptpackage.ManageCategoryTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testscriptpackage.ManageCategoryTest@475c9c31]" started-at="2025-07-28T21:25:02 IST" name="beforeMethod" finished-at="2025-07-28T21:25:06 IST" duration-ms="4618" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyThatTheUserCanSaveNews()[pri:0, instance:testscriptpackage.ManageNewsPageTest@5c6648b0]" started-at="2025-07-24T17:40:58 IST" name="verifyThatTheUserCanSaveNews" finished-at="2025-07-24T17:41:01 IST" duration-ms="3043" status="PASS">
+        <test-method signature="verifyThatTheUserIsAbleToAddNewCategory()[pri:0, instance:testscriptpackage.ManageCategoryTest@475c9c31]" started-at="2025-07-28T21:25:06 IST" name="verifyThatTheUserIsAbleToAddNewCategory" finished-at="2025-07-28T21:25:11 IST" duration-ms="4861" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyThatTheUserCanSaveNews -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscriptpackage.ManageNewsPageTest@5c6648b0]" started-at="2025-07-24T17:41:01 IST" name="afterMethod" finished-at="2025-07-24T17:41:01 IST" duration-ms="161" status="PASS">
+        </test-method> <!-- verifyThatTheUserIsAbleToAddNewCategory -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testscriptpackage.ManageCategoryTest@475c9c31]" started-at="2025-07-28T21:25:11 IST" name="afterMethod" finished-at="2025-07-28T21:25:11 IST" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testscriptpackage.ManageNewsPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testscriptpackage.ManageCategoryTest -->
+    </test> <!-- ExtendReport -->
+  </suite> <!-- Suite -->
 </testng-results>

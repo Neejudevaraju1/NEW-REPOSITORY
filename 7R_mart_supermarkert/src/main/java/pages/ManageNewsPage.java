@@ -16,7 +16,7 @@ public class ManageNewsPage {
 	@FindBy(xpath="//textarea[@id='news']")WebElement enterNews;
 	@FindBy(xpath="//button[@name='create']")WebElement saveButton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertMessage;
-	
+	@FindBy(xpath="//a[@onclick='click_button(2)']")WebElement searchIcon;
 	public ManageNewsPage clickNewButton() {
 		newButton.click();
 		return this;
@@ -32,5 +32,9 @@ public class ManageNewsPage {
 	public boolean isAlertIsDiplayedAfterSaving() {
 		
 		return alertMessage.isDisplayed();
+	}
+	public ManageNews_Search clickOnSearchIcon() {
+		searchIcon.click();
+		return new ManageNews_Search(driver);
 	}
 }
