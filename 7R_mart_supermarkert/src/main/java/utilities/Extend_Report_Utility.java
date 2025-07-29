@@ -11,7 +11,7 @@ public class Extend_Report_Utility {
 		reporter.config().setReportName("SevenRMartSuperMarket");
 		extentReports.attachReporter(reporter);
 		extentReports.setSystemInfo("organization", "Obsqura");
-		extentReports.setSystemInfo("Name", "Athira");
+		extentReports.setSystemInfo("Name", "Neeju");
 		return extentReports;
 }
 }
