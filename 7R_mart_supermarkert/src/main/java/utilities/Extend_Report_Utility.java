@@ -13,5 +13,5 @@ public class Extend_Report_Utility {
 		extentReports.setSystemInfo("organization", "Obsqura");
 		extentReports.setSystemInfo("Name", "Neeju");
 		return extentReports;
-}
+	}
 }

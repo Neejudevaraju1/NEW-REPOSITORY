@@ -16,8 +16,8 @@ public class ExcelUtility {
 	static XSSFWorkbook w;
 	static XSSFSheet sh;
 
-	public static String readStringData(int row, int col,String sheet) throws IOException {
-		String filePath=Constant.TESTDATA;
+	public static String readStringData(int row, int col, String sheet) throws IOException {
+		String filePath = Constant.TESTDATA;
 		f = new FileInputStream(filePath);
 		w = new XSSFWorkbook(f);
 		sh = w.getSheet(sheet);
@@ -27,16 +27,16 @@ public class ExcelUtility {
 
 	}
 
-	public static String readIntegerData(int row, int col,String sheet) throws IOException {
-		String filePath=Constant.TESTDATA;
+	public static String readIntegerData(int row, int col, String sheet) throws IOException {
+		String filePath = Constant.TESTDATA;
 		f = new FileInputStream(filePath);
 		w = new XSSFWorkbook(f);
 		sh = w.getSheet(sheet);
 		XSSFRow r = sh.getRow(row);
 		XSSFCell c = r.getCell(col);
-		int val =   (int) c.getNumericCellValue();  //convert double to int using typecasting
-		return String.valueOf(val);   //convert int to string using valueOf() method
-		//return val;
-	
+		int val = (int) c.getNumericCellValue(); // convert double to int using typecasting
+		return String.valueOf(val); // convert int to string using valueOf() method
+		// return val;
+
 	}
 }

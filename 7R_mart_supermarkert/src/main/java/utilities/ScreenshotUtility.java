@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +17,7 @@ public class ScreenshotUtility {
 		File screenShot = scrShot.getScreenshotAs(OutputType.FILE); // screenshot will store in temporary path
 																	// "screenShot
 		File f1 = new File(System.getProperty("user.dir") + "\\OutputScreenshots");// Generating folder using Java
-if (!f1.exists()) {
+		if (!f1.exists()) {
 			f1.mkdirs();// mkdir --> will create folder using java make directory
 		}
 
