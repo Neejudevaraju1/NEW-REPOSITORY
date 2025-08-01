@@ -12,7 +12,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginPageTest extends Base {
-	@Test
+	@Test(groups = {"smoke"})
 	public void VerifyUserCanLoginWithValidCredentials() throws IOException {
 		LoginPage login = new LoginPage(driver);
 		String userName = ExcelUtility.readStringData(1, 0, "Loginpagetest");
@@ -23,7 +23,7 @@ public class LoginPageTest extends Base {
 		Assert.assertTrue(isdashboardDisplayed, Constant.ERROR_MESSAGE_FOR_LOGIN);
 	}
 
-	@Test(dataProvider = "credentials")
+	@Test(dataProvider = "credentials",groups = {"smoke"})
 	public void verifyUserCanLoginWithValidUsernameAndInvalidPassword(String user, String pass) {
 		LoginPage login = new LoginPage(driver);
 		login.usernameAndPassword(user, pass);

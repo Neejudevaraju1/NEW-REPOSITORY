@@ -10,12 +10,14 @@ import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUserPageTest extends Base {
 	HomePage homepage;
 	AdminUserPage adminuser;
+	FakerUtility faker= new FakerUtility();
 
-	@Test
+	@Test(retryAnalyzer = retry.Retry.class)
 	public void createNewAdminUserInformation() throws IOException {
 		LoginPage login = new LoginPage(driver);
 		String userName = ExcelUtility.readStringData(1, 0, "Loginpagetest");
@@ -25,6 +27,8 @@ public class AdminUserPageTest extends Base {
 		adminuser = homepage.clickOnAdmin();
 		String Admin_userName = ExcelUtility.readStringData(1, 0, "AdminUserPageTest");
 		String admin_Password = ExcelUtility.readStringData(1, 1, "AdminUserPageTest");
+		//String Admin_userName=faker.getFakeFirstName();
+		//String admin_Password=faker.getPassword();
 		String admin_UserType = ExcelUtility.readStringData(1, 2, "AdminUserPageTest");
 		adminuser.clickOnNew().enterUserAndPassword(Admin_userName, admin_Password).selectFromDropdown(admin_UserType)
 				.clickSaveButton();

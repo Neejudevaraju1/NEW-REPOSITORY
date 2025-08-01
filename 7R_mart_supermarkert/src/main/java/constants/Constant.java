@@ -10,4 +10,5 @@ public class Constant {
 	public static final String ERROR_MESSAGE_ADMIN_SEARCH_FAIL = "Search result of the admin functionality is incorrect";
 	public static final String TESTDATA = System.getProperty("user.dir") + "//src//main//resources//TestData.xlsx";
 	public static final String TEST_PIC = System.getProperty("user.dir") + "//src//main//resources//Ring.jpg";
+	public static final String CONFIG_FILE=System.getProperty("user.dir")+"//src//test//resources//config.properties";
 }
